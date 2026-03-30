@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabbed Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <input type="radio" name="tab" id="overview" checked>
+  <input type="radio" name="tab" id="assignments">
+  <input type="radio" name="tab" id="notes">
+  <input type="radio" name="tab" id="profile">
+
+  
+  <header>
+    <nav class="navbar">
+      <h1>Task6</h1>
+
+      <div class="tabs">
+        <label for="overview">🏠 Overview</label>
+        <label for="assignments">📚 Assignments</label>
+        <label for="notes">📝 Notes</label>
+        <label for="profile">👤 Profile</label>
+      </div>
+    </nav>
+  </header>
+
+  
+<main>
+  <div id="content-overview" class="tabs__content">
+    <h2>Overview</h2>
+    <div class="card">📊 Total Tasks: 12</div>
+    <div class="card">🔥 Pending: 5</div>
+    <div class="card">✅ Completed: 7</div>
+  </div>
+
+  <div id="content-assignments" class="tabs__content">
+    <h2>Assignments</h2>
+    <div class="card">Math Homework - Due Tomorrow</div>
+    <div class="card">AI Project - Due in 3 days</div>
+    <div class="card">DBMS Assignment - Due Next Week</div>
+  </div>
+
+  <div id="content-notes" class="tabs__content">
+    <h2>Notes</h2>
+    <div class="card">DSA - Linked List Notes</div>
+    <div class="card">Computer Networks - Module 2</div>
+    <div class="card">AI - Bayesian Learning</div>
+  </div>
+
+  <div id="content-profile" class="tabs__content">
+    <h2>Profile</h2>
+    <div class="card">Name: Student Name</div>
+    <div class="card">Course: Computer Science</div>
+    <div class="card">Progress: 70%</div>
+  </div>
+</main>
+
+</div>
+
+</body>
+</html>

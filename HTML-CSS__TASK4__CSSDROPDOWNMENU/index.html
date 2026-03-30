@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropdown Menu</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="dropdown">
+
+        <input type="checkbox" id="python">
+        <input type="checkbox" id="js">
+        <input type="checkbox" id="java">
+        <input type="checkbox" id="select-btn">
+
+        <input type="checkbox" id="toggle">
+        <label for="toggle" class="btn">Courses ▾</label>
+
+        <div class="menu">
+            <ul>
+                <li class="select-option">
+                    <label for="select-btn">
+                        Select All
+                    </label>
+                </li>
+                <li class="option-python">
+                    <label for="python">
+                        Python
+                    </label>
+                </li>
+                 <li class="option-js">
+                    <label for="js">
+                    Javascript
+                    </label>
+                </li>
+                <li class="option-java">
+                    <label for="java">
+                    Java
+                    </label>
+                </li>
+                
+            </ul>
+
+        </div>
+
+        <div class="content">
+            <h3>The Selected options are:</h3>
+            <h4 for="python" class="python-content" >Python</h4>
+            <h4 for="js" class="js-content">Javascript</h4>
+            <h4 for="java" class="java-content">Js</h4>
+        </div>
+    </div>
+
+</body>
+</html>

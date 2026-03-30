@@ -1,0 +1,182 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* CENTER SCREEN */
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    background: #f4f6f9;
+}
+
+/* DROPDOWN CONTAINER */
+.dropdown {
+    
+    position: relative;
+}
+
+.dropdown input{
+    display: none;
+}
+/* HIDE CHECKBOX */
+#toggle {
+    display: none;
+}
+
+/* BUTTON */
+.btn {
+    background: #4a90e2;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    display: inline-block;
+}
+
+/* MENU BOX */
+.menu {
+    position: absolute;
+    top: 65px;
+    width: 200px;
+    background: white;
+    border-radius: 6px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+
+    /* animation */
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.5s ease;
+}
+
+/* SHOW MENU */
+#toggle:checked ~ .menu {
+    max-height: 300px;
+}
+
+#toggle:checked ~.content{
+    opacity:1;
+    transform: translateY(0);
+}
+
+.content {
+    position: absolute;
+    top: 65px;      
+    left: 220px;    
+    
+    width: 200px;
+    padding: 15px;
+
+    opacity: 0;
+    transform: translateY(-20px);
+
+    background: white;
+    border-radius: 6px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.content h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.content h4 {
+    opacity: 0;
+    margin: 5px 0;
+    transition: 0.3s;
+}
+#python:checked ~ .menu ul .option-python{
+    background-color: #4a90e2;
+}
+
+
+#python:checked ~ .content .python-content{
+    opacity:1;
+}
+
+
+#js:checked ~ .menu ul .option-js{
+    background-color: #4a90e2;
+}
+
+#js:checked ~ .content .js-content{
+    opacity:1;
+}
+
+
+#java:checked ~ .menu ul .option-java{
+    background-color: #4a90e2;
+}
+
+#java:checked ~ .content .java-content{
+    opacity:1;
+}
+
+#select-btn:checked ~ .menu .option-python{
+    opacity:1;
+    background-color: #4a90e2;
+}
+
+#select-btn:checked ~ .menu .option-js{
+    opacity:1;
+    background-color: #4a90e2;
+}
+
+#select-btn:checked ~ .menu .option-java{
+    opacity:1;
+    background-color: #4a90e2;
+}
+
+#select-btn:checked ~ .menu ul .select-option{
+    background-color: #4a90e2;
+}
+
+
+#select-btn:checked ~ .content .python-content{
+    opacity:1;
+}
+
+#select-btn:checked ~ .content .js-content{
+    opacity:1;
+}
+
+#select-btn:checked ~ .content .java-content{
+    opacity:1;
+}
+
+/* LIST */
+.menu ul {
+    list-style: none;
+}
+
+/* ITEMS */
+.menu li {
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.menu li label {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    cursor: pointer;
+}
+
+
+/* HOVER EFFECT */
+.menu li:hover {
+    background: #f1f1f1;
+}
+
+/* REMOVE LAST BORDER */
+.menu li:last-child {
+    border-bottom: none;
+}

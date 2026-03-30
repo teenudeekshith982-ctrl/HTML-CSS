@@ -1,0 +1,100 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* HEADER */
+header {
+  background: linear-gradient(135deg, #4facfe, #00f2fe);
+  padding: 15px 25px;
+  color: white;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tabs {
+  display: flex;
+  gap: 10px;
+}
+
+.tabs label {
+  padding: 8px 16px;
+  background: rgba(255,255,255,0.2);
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.tabs label:hover {
+  background: rgba(255,255,255,0.4);
+}
+
+/* ACTIVE TAB */
+#overview:checked ~ header label[for="overview"],
+#assignments:checked ~ header label[for="assignments"],
+#notes:checked ~ header label[for="notes"],
+#profile:checked ~ header label[for="profile"] {
+  background: white;
+  color: #333;
+}
+
+/* MAIN */
+main {
+  padding: 30px;
+  background: #f0f4f8;
+  min-height: calc(100vh - 70px);
+  position: relative;
+}
+
+/* CONTENT BOX */
+.tabs__content {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  right: 30px;
+
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  opacity:0;
+  transform: translateY(20px);
+  pointer-events: none;
+
+  transition: all 4s ease;
+}
+
+/* SHOW ACTIVE CONTENT */
+#overview:checked ~ main #content-overview,
+#assignments:checked ~ main #content-assignments,
+#notes:checked ~ main #content-notes,
+#profile:checked ~ main #content-profile {
+  opacity:1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+/* Hide inputs */
+input {
+  display: none;
+}
+
+/* Dummy cards */
+.card {
+  background: #f9fafc;
+  padding: 15px;
+  border-radius: 8px;
+  margin-top: 10px;
+  border-left: 4px solid #4facfe;
+}
